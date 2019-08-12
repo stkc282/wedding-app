@@ -1,0 +1,34 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Invitation</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/invapp.css' %}">
+    </head>
+    <body>
+        <center>
+            <h2>Name</h2>
+            <td><input type="text" name="name" size="30" maxlength="20"></td>
+        <div>
+            <h2>Address</h2>
+            <h3><input type="text" name="address" size="30" maxlength="20"></h3>
+            <h3><input type="text" name="address" size="30" maxlength="20"></h3>
+            <h3><input type="text" name="address" size="30" maxlength="20"></h3>
+            <h3><input type="text" name="address" size="30" maxlength="20"></h3>
+        </div>
+        <div>
+            <h2>アレルギー</h2>
+             <td><input type="text" name="address" size="100" maxlength="20"></td>
+        </div>
+        <div>
+            <h2>返信をお願い致します</h2>
+        </div>
+        <div>
+            <h1><a href="/send/"><img src="{% static "invapp/img/送信アイコン.png"%}" width="250px"/></a></h1>
+        </div>
+        </center>
+    </body>
+</html>

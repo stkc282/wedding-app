@@ -10,3 +10,9 @@ def top_page(request):
 
 def detail(request):
     return render(request, 'invapp/detail.html', {})
+
+def input(request):
+    return render(request, 'invapp/input.html', {})
+
+def send(request):
+    return render(request, 'invapp/send.html', {})
