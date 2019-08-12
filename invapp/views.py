@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.utils import timezone
 from .models import Post
 from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponse
+from invapp.forms import KakikomiForm
 
 
 def top_page(request):
@@ -11,8 +13,12 @@ def top_page(request):
 def detail(request):
     return render(request, 'invapp/detail.html', {})
 
+# def input(request):
+#     return render(request, 'invapp/input.html', {})
+
 def input(request):
-    return render(request, 'invapp/input.html', {})
+    f = KakikomiForm()
+    return render(request, 'invapp/input.html', {'form1': f} )
 
 def send(request):
     return render(request, 'invapp/send.html', {})

@@ -10,19 +10,9 @@
     </head>
     <body>
         <center>
-            <h2>Name</h2>
-            <td><input type="text" name="name" size="30" maxlength="20"></td>
-        <div>
-            <h2>Address</h2>
-            <h3><input type="text" name="address" size="30" maxlength="20"></h3>
-            <h3><input type="text" name="address" size="30" maxlength="20"></h3>
-            <h3><input type="text" name="address" size="30" maxlength="20"></h3>
-            <h3><input type="text" name="address" size="30" maxlength="20"></h3>
-        </div>
-        <div>
-            <h2>アレルギー</h2>
-             <td><input type="text" name="address" size="100" maxlength="20"></td>
-        </div>
+            <form action="" method="post">
+                <table>{{form1.as_table}}</table>
+            </form>
         <div>
             <h2>返信をお願い致します</h2>
         </div>
@@ -30,5 +20,6 @@
             <h1><a href="/send/"><img src="{% static "invapp/img/送信アイコン.png"%}" width="250px"/></a></h1>
         </div>
         </center>
+
     </body>
 </html>
