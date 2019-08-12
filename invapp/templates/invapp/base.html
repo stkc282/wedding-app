@@ -1,0 +1,41 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Invitation</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/invapp.css' %}">
+    </head>
+    <body>
+        <center>
+        <img src="{% static "invapp/img/invitation.png"%}" style="max-height:500px"/>
+        <img src="{% static "invapp/img/image.png"%}" style="max-height:500px"/>
+        <div>
+            <p>謹啓</p>
+            <p>皆様におかれましては</p>
+            <p>ますますご清祥のこととお慶び申し上げます</p>
+        </div>
+        <div>
+            <p>このたび　私たちは結婚をすることになりました</p>
+            <p>つきましては　日頃お世話になっております皆様に</p>
+            <p>感謝を込めて　ささやかな小宴を催したく存じます</p>
+        </div>
+        <div>
+            <p>ご多用中　誠に恐縮ではございますが</p>
+            <p>ぜひご出席をいただきたく　ご案内申し上げます</p>
+        </div>
+        <div>
+            <p>謹白</p>
+            <p>2019年8月吉日 </p>
+        </div>
+        <div>
+            <h1><a href="/detail/">Infomation</a></h1>
+            <h1><a href="https://goo.gl/maps/pJLducd8Eb9YTRm19">Access</a></h1>
+        </div>
+        </center>
+    {% block content %}
+    {% endblock %}
+    </body>
+</html>
