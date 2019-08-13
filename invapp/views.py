@@ -16,9 +16,9 @@ def detail(request):
 # def input(request):
 #     return render(request, 'invapp/input.html', {})
 
-def input(request):
+def input_page(request):
     f = KakikomiForm()
     return render(request, 'invapp/input.html', {'form1': f} )
 
-def send(request):
+def send_page(request):
     return render(request, 'invapp/send.html', {})
