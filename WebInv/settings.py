@@ -25,7 +25,7 @@ SECRET_KEY = '$ft0)p*9f%(hw3qc&m3z0i#7t(xb)d@*zipc8hkk4ty23y1)bv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,7 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'invapp',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.line',
+    'accounts.apps.AccountsConfig',
+    'social_django',
+
 
 ]
 
@@ -56,7 +64,7 @@ ROOT_URLCONF = 'WebInv.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -64,6 +72,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',  # <- Here
+                'social_django.context_processors.login_redirect', # <- Here
             ],
         },
     },
@@ -124,3 +134,21 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'dist'),
 )
+
+SITE_ID = 1
+LOGIN_REDIRECT_URL = 'home'
+ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'
+
+LINE_CHANNEL_ID = "1609410808"
+LINE_CHANNEL_SECRET = "b5bd39230b7f85d2bbfc9befc9a14b48"
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'stkc282@gmail.com'
+EMAIL_HOST_PASSWORD = 'xR6iVHPb'
+EMAIL_USE_TLS = True
+
+AUTHENTICATION_BACKENDS = [
+    'social_core.backends.line.LineOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+]

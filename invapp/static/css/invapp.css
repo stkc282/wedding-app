@@ -42,10 +42,40 @@ h2, h3, h4 {
     margin-right: 20px;
 }
 
+
+
+
+.errorlist {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: red;
+}
 .post {
     margin-bottom: 70px;
 }
 
 .post h1 a, .post h1 a:visited {
     color: #000000;
+}
+
+div.field {
+    margin-top: 100px;
+}
+
+div.field > span.helptext {
+    font-size: 14px;
+    color: #999;
+}
+
+div.field > label {
+    display: block;
+}
+
+div.field > input, div.field > textarea, div.field > select, div.field > button {
+    width: 100%;
+    padding: 6px 12px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: solid 1px #999;
 }
