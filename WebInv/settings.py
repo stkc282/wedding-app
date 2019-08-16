@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.line',
-    'accounts.apps.AccountsConfig',
     'social_django',
 
 
@@ -137,7 +136,7 @@ STATICFILES_DIRS = (
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = 'home'
-ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'
+# ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'
 
 LINE_CHANNEL_ID = "1609410808"
 LINE_CHANNEL_SECRET = "b5bd39230b7f85d2bbfc9befc9a14b48"

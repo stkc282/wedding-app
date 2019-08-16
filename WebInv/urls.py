@@ -23,7 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('invapp.urls')),
     # path('', TemplateView.as_view(template_name='home.html'), name='home'),
-    path('accounts/', include('allauth.urls')),
 ]
 
 
